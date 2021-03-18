@@ -1,4 +1,4 @@
-# 3_Strings_and_basics_of_text_processing
+# Strings and basics of text processing
 
 ## Работа со строкой как с массивом символов
 1. Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.
