@@ -20,14 +20,19 @@ public class JavaCoder2021 {
         students[9] = new Student("Pleshko P.P.", 3, new int[] {9, 10, 9, 9, 10}); 
         
         System.out.println("All students:");
-        for (Student student : students)
-            student.print();
+        showAllStudents(students);
         
         System.out.println("--------------------------");
                
         System.out.println("Best students:");
         showBestStudents(students);   
         
+    }
+    
+    public static void showAllStudents(Student[] students)
+    {
+        for (Student student : students)
+            student.print();
     }
     
     public static void showBestStudents(Student[] students)
