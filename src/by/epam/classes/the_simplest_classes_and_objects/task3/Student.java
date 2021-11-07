@@ -10,15 +10,34 @@ package by.epam.classes.the_simplest_classes_and_objects;
 
 public class Student {
     
-    public String fio;
-    public int groupNumber;
-    public int[] academicPerformance = new int[5];  
+    private String fio;
+    private int groupNumber;
+    private int[] academicPerformance = new int[5];  
     
     public Student(String fio, int groupNumber, int[] academicPerformance)
     {
         this.fio = fio;
         this.groupNumber = groupNumber;
         this.academicPerformance = academicPerformance;
+    }
+    
+    public boolean isGood()
+    {
+        boolean bestSt;
+        bestSt = true;
+        for (int i : academicPerformance)
+        {
+                if (i < 9)
+                    bestSt = false;
+        }
+        
+        return bestSt;
+
+    }
+    
+    public void print ()
+    {
+        System.out.printf("%s, №%d \n", fio, groupNumber);  
     }
     
 }
