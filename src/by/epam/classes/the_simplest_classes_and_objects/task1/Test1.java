@@ -12,6 +12,8 @@ public class Test1 {
     
     private int a;
     private int b;
+    private int sum;
+    private int max;
        
     public void setA(int a)
     {
@@ -35,16 +37,18 @@ public class Test1 {
     
     public void sumAB()
     {
-        int sum = a + b;
-        System.out.println("sum a + b = " + sum);
+        sum = a + b;
+        System.out.println("sum = " + sum);
     }
     
     public void maxAB()
     {
         if (a >= b)
-            System.out.println("a >= b");
+            max = a;
         else
-            System.out.println("b > a");
+            max = b;
+
+        System.out.println("max = " + max);
     }
     
 }
