@@ -35,7 +35,7 @@ public class Student {
 
     }
     
-    public void print ()
+    public void print()
     {
         System.out.printf("%s, №%d \n", fio, groupNumber);  
     }
