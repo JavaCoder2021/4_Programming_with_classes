@@ -17,8 +17,17 @@ public class JavaCoder2021 {
         time.setSec(35);
         time.showTime();
         
-        time.addTime(11, 60, 60);
+        time.addTime(10, 50, 50);
         time.showTime();
+        
+        time.addSeconds(50);
+        time.showTime();
+
+        time.addMinutes(50);
+        time.showTime();
+
+        time.addHours(5);
+        time.showTime();        
         
     }
     
