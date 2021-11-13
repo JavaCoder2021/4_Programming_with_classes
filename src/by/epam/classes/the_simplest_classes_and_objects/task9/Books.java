@@ -6,6 +6,11 @@ public class Books {
     
     LinkedList<Book> books = new LinkedList();
     
+    public Books()
+    {
+        addBooks();
+    }
+    
     public void addBooks() 
     {
         books.add(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, 
