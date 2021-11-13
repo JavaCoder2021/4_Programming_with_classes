@@ -32,19 +32,23 @@ public class Customer {
         bankAccountNumber = bankAccountNumber_;
     }
     
-    public void setSurname(String surname_) {
+    public void setSurname(String surname_) 
+    {
         surname = surname_;
     }    
     
-    public void setName(String name_) {
+    public void setName(String name_) 
+    {
         name = name_;
     }  
     
-    public void setPatronymic(String patronymic_) {
+    public void setPatronymic(String patronymic_) 
+    {
         patronymic = patronymic_;
     }
     
-    public void setAddress(String address_) {
+    public void setAddress(String address_) 
+    {
         address = address_;
     }
     
@@ -58,23 +62,28 @@ public class Customer {
         bankAccountNumber = bankAccountNumber_;
     }
     
-    public int getId() {
+    public int getId() 
+    {
         return id;
     }
     
-    public String getSurname() {
+    public String getSurname() 
+    {
         return surname;
     }
     
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
  
-    public String getPatronymic() {
+    public String getPatronymic() 
+    {
         return patronymic;
     }
  
-    public String getAddress() {
+    public String getAddress() 
+    {
         return address;
     }    
     
