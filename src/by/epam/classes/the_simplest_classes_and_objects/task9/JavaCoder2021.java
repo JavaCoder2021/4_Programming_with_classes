@@ -8,7 +8,6 @@ public class JavaCoder2021 {
     public static void main(String[] args) {
         
         Books books = new Books();
-        books.addBooks();
     
         Scanner input = new Scanner(System.in);
         int choice;
