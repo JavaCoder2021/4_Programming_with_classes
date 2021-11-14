@@ -1,6 +1,6 @@
 package javacoder2021;
 
-import by.epam.classes.the_simplest_classes_and_objects.*;
+import by.epam.classes.aggregation_and_composition.*;
 import java.util.*;
 
 public class JavaCoder2021 {
