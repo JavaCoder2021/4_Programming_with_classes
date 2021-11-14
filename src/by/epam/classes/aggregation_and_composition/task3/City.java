@@ -4,7 +4,7 @@
 Методы: вывести на консоль столицу, количество областей, площадь, областные центры.  
 */
 
-package by.epam.classes.the_simplest_classes_and_objects;
+package by.epam.classes.aggregation_and_composition;
 
 public class City {
     
