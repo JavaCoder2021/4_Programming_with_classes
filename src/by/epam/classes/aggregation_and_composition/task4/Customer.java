@@ -69,9 +69,14 @@ public class Customer {
     
     public void accountInfo(int id)
     {
-        for (BankAccount bankAccount : accountsList)
-            if (bankAccount.getId() == id)
-                System.out.println(bankAccount.toString());
+        if (id >=0 && id < accountsList.size())
+        {
+            for (BankAccount bankAccount : accountsList)
+                if (bankAccount.getId() == id)
+                    System.out.println(bankAccount.toString());
+        }
+        else 
+            System.out.println("Incorrect choose!");
     }
     
     public void sortBankAccount()
