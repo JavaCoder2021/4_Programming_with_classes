@@ -24,7 +24,7 @@ public class Main {
         
         while (true) {
             menuText();
-            choice = Integer.parseInt(input.nextLine());
+            choice = scannerInt();
             if (choice == 0)
                 break;
             if (choice < 0 || choice > 3) {
@@ -51,6 +51,24 @@ public class Main {
             }     
             
         }    
+        
+    }
+    
+    private static int scannerInt() {
+        
+        Scanner input = new Scanner(System.in);
+        int num = -1;
+        
+        do {
+            if (input.hasNextInt()) {
+                num = input.nextInt();
+            } 
+            else {
+                input.next();
+            }
+        } while (num <= 0);
+
+        return num;
         
     }
     
