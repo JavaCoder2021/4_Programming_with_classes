@@ -12,8 +12,7 @@ public class Customers {
     }
     
     public void print() {
-        for (Customer mbr : customers) 
-        {
+        for (Customer mbr : customers) {
             mbr.print();
         }
     }
