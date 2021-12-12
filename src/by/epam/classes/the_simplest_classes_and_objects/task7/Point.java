@@ -1,4 +1,4 @@
-package by.epam.classes.the_simplest_classes_and_objects;
+package by.epam.classes.the_simplest_classes_and_objects.task7;
 
 import java.util.Scanner;
 
@@ -6,42 +6,35 @@ public class Point {
     
     private double x, y;
     
-    public Point(double x_, double y_) 
-    {
+    public Point(double x_, double y_) {
         x = x_;
         y = y_;
     }
        
-    public Point() 
-    {
+    public Point() {
         this(0, 0);
     }
     
-    public double getX()
-    {
+    public double getX() {
         return x;
     }
     
-    public double getY()
-    {
+    public double getY() {
         return y;
     }
     
-    public static double distance(Point a, Point b) 
-    {
+    public static double distance(Point a, Point b) {
         double dx = a.x - b.x;
         double dy = a.y - b.y;
         
         return Math.sqrt(dx * dx + dy * dy);
     }
     
-    public void print() 
-    {
+    public void print() {
         System.out.printf("x: %.2f, y: %.2f \n", x, y);
     }
     
-    public void read(Scanner scanner) 
-    {
+    public void read(Scanner scanner) {
         System.out.print("x: ");
         while (!scanner.hasNextDouble()) {
             scanner.next();
