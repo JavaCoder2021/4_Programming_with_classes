@@ -1,10 +1,4 @@
-/*
-1. 
-Создать объект класса Текст, используя классы Предложение, Слово. 
-Методы: дополнить текст, вывести на консоль текст, заголовок текста.  
-*/
-
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task1;
 
 import java.util.*;
 
@@ -12,32 +6,24 @@ public class Text {
     
     private ArrayList<Sentence> text = new ArrayList<>();
     private String head;
-    
-    public Text()
-    {
-        //
-    }
-    
-    public void setHead(String head)
-    {
+       
+    public void setHead(String head) {
         this.head = head;
     }
     
-    public String getHead()
-    {
+    public String getHead() {
         return head;
     }
     
-    public void addSentence(Sentence sentence) 
-    {
+    public void addSentence(Sentence sentence) {
         text.add(sentence);
     }
     
-    public void print()
-    {
+    public void print() {
         System.out.println(head + ". ");
         for (Sentence sentense : text)
             sentense.print();
+        System.out.println();
     }
     
 }
