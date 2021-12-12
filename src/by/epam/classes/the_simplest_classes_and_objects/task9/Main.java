@@ -62,7 +62,7 @@ public class Main {
             else {
                 input.next();
             }
-        } while (num <= 0);
+        } while (num < 0);
 
         return num;
         
