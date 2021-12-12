@@ -7,8 +7,6 @@
  */
 package by.epam.classes.the_simplest_classes_and_objects.task3;
 
-import java.util.Arrays;
-
 public class Student {
     
     private String fio;
