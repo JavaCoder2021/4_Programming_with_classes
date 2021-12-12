@@ -1,4 +1,4 @@
-package by.epam.classes.the_simplest_classes_and_objects;
+package by.epam.classes.the_simplest_classes_and_objects.task9;
 
 import java.util.*;
 
@@ -6,13 +6,11 @@ public class Books {
     
     LinkedList<Book> books = new LinkedList();
     
-    public Books()
-    {
+    public Books() {
         addBooks();
     }
     
-    public void addBooks() 
-    {
+    public void addBooks() {
         books.add(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, 
                 "160", 13.55, "Мягкая обложка"));
         books.add(new Book("Как завоевывать друзей и оказывать влияние на людей", "Дейл Карнеги", "Попурри", 2020, 
@@ -23,28 +21,24 @@ public class Books {
                 "352", 24.74, "Мягкая обложка"));
     }
        
-    public void sortByAuthor(Scanner input) 
-    {
+    public void sortByAuthor(Scanner input) {
         System.out.print("Author: ");
         String bookAuthor = input.nextLine();
         for (Book mbr : books) 
-            if (bookAuthor.equals(mbr.getAuthor()))
+            if (bookAuthor.toLowerCase().equals(mbr.getAuthor().toLowerCase()))
                 mbr.print();
     }
     
-    public void sortByPublisher(Scanner input) 
-    {
+    public void sortByPublisher(Scanner input) {
         System.out.print("Publisher: ");
         String bookPublisher = input.nextLine();
-        for (Book mbr : books) 
-        {    
-            if (bookPublisher.equals(mbr.getPublisher()))
+        for (Book mbr : books) {    
+            if (bookPublisher.toLowerCase().equals(mbr.getPublisher().toLowerCase()))
                 mbr.print();
         }
     }
     
-    public void sortByYear(Scanner input) 
-    {
+    public void sortByYear(Scanner input) {
         System.out.print("After given year: ");
         while (!input.hasNextInt()) {
             input.next();
@@ -52,8 +46,7 @@ public class Books {
             System.out.print("After given year: ");
         }
         int year = Integer.parseInt(input.nextLine());
-        for (Book mbr : books) 
-        {    
+        for (Book mbr : books) {    
             if (mbr.getYearOfPublication() > year)
                 mbr.print();
         }
