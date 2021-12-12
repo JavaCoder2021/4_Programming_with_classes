@@ -1,26 +1,22 @@
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task1;
 
 public class Word {
     
     private String word;
     
-    public Word()
-    {
+    public Word() {
         this.word = "null";
     }
     
-    public Word(String word)
-    {
+    public Word(String word) {
         setValue(word);
     }
     
-    public void setValue(String word) 
-    {
+    public void setValue(String word) {
         this.word = word;
     }  
 
-    public String getValue() 
-    {
+    public String getValue() {
         return word;
     }    
     
