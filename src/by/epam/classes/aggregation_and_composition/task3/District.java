@@ -1,4 +1,4 @@
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task3;
 
 import java.util.*;
 
@@ -7,23 +7,19 @@ public class District {
     private String region, district;
     Scanner scanner = new Scanner(System.in);
  
-    public District(String region, String district) 
-    {
+    public District(String region, String district) {
         this.district = district;
     }
 
-    public String getRegion() 
-    {
+    public String getRegion() {
         return region;
     }    
     
-    public String getDistrict() 
-    {
+    public String getDistrict() {
         return district;
     }
  
-    public static District addDistrict() 
-    {
+    public static District addDistrict() {
         District district = new District("", "");
         System.out.println("Add district: ");
         System.out.println("---------------------------");
