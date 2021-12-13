@@ -16,7 +16,7 @@ public class Main {
         
         while (true) {
             menuText();
-            choice = scannerInt();
+            choice = Country.numInput();
             if (choice == 0)
                 break;
             if (choice < 0 || choice > 5) {
@@ -44,24 +44,6 @@ public class Main {
             }     
             
         } 
-        
-    }
-    
-    private static int scannerInt() {
-        
-        Scanner input = new Scanner(System.in);
-        int num = -1;
-        
-        do {
-            if (input.hasNextInt()) {
-                num = input.nextInt();
-            } 
-            else {
-                input.next();
-            }
-        } while (num < 0);
-
-        return num;
         
     }
     
