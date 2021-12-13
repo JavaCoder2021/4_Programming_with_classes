@@ -1,35 +1,28 @@
-package by.epam.classes.aggregation_and_composition;
-
-import java.util.*;
+package by.epam.classes.aggregation_and_composition.task3;
 
 public class Region {
     
     private String region, regionCity;
     private double square;
  
-    public Region(String region, String regionCity, double square) 
-    {
+    public Region(String region, String regionCity, double square) {
         this.region = region;
         this.square = square;
     }
  
-    public String getRegion() 
-    {
+    public String getRegion() {
         return region;
     }
     
-   public String getRegionCity() 
-    {
+    public String getRegionCity() {
         return regionCity;
     }
  
-    public double getSquare() 
-    {
+    public double getSquare() {
         return square;
     }
  
-    public static Region addRegion() 
-    {
+    public static Region addRegion() {
         Region region = new Region("", "", 0);
         System.out.println("Add region: ");
         System.out.println("---------------------------");        
