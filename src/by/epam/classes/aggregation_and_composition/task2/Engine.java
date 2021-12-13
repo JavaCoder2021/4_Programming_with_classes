@@ -1,4 +1,4 @@
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task2;
 
 import java.util.*;
 
@@ -7,14 +7,12 @@ class Engine {
     private int number;
     private int power;
  
-    public Engine(int number, int power) 
-    {
+    public Engine(int number, int power) {
         this.number = number;
         this.power = power;
     }
        
-    public static Engine get(Scanner scanner) 
-    {
+    public static Engine get(Scanner scanner) {
         Engine object = new Engine(0, 0);
         System.out.print("Engine number: ");
         object.number = scanner.nextInt();
@@ -24,8 +22,7 @@ class Engine {
         return object;
     }
     
-    public String toString() 
-    {
+    public String toString() {
         return "Engine: " + number + ", Power: " + power;
     }
  
