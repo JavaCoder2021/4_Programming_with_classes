@@ -1,32 +1,22 @@
-/*
-3. 
-Создать объект класса Государство, используя классы Область, Район, Город. 
-Методы: вывести на консоль столицу, количество областей, площадь, областные центры.  
-*/
-
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task3;
 
 public class City {
     
     private String district, city;
  
-    public City(String city) 
-    {
+    public City(String city) {
         this.city = city;
     }
  
-    public String getCity() 
-    {
+    public String getCity() {
         return city;
     }
     
-    public String getDistrict() 
-    {
+    public String getDistrict() {
         return district;
     }
  
-    public static City addCity()
-    {
+    public static City addCity() {
         City city = new City("");
         System.out.println("Add city: ");
         System.out.println("---------------------------");
