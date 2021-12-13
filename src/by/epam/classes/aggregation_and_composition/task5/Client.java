@@ -1,4 +1,4 @@
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task5;
 
 public class Client {
     
@@ -6,47 +6,39 @@ public class Client {
     private int    clientAge;
     private String clientPhoneNumbers;
         
-    public Client(String clientName, int clientAge, String clientPhoneNumbers)
-    {
+    public Client(String clientName, int clientAge, String clientPhoneNumbers) {
         this.clientName         = clientName;
         this.clientAge          = clientAge;
         this.clientPhoneNumbers = clientPhoneNumbers;
         
     } 
     
-    public String getClientName()
-    {
+    public String getClientName() {
         return clientName;
     }    
     
-    public int getClientAge()
-    {
+    public int getClientAge() {
         return clientAge;
     }
     
-    public String getClientPhoneNumbers()
-    {
+    public String getClientPhoneNumbers() {
         return clientPhoneNumbers;
     }    
      
-    public void setClientName(String clientName)
-    {
+    public void setClientName(String clientName) {
         this.clientName = clientName;
     }
     
-    public void setClientAge(int clientAge)
-    {
+    public void setClientAge(int clientAge) {
         this.clientAge = clientAge;
     }
     
-    public void setClientPhoneNumbers(String clientPhoneNumbers)
-    {
+    public void setClientPhoneNumbers(String clientPhoneNumbers) {
         this.clientPhoneNumbers = clientPhoneNumbers;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Name: " + clientName + "; Age: " + clientAge + "; Phone number: " + clientPhoneNumbers + ";";
     }    
     
