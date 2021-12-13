@@ -1,13 +1,4 @@
-/*
-4. 
-Счета. Клиент может иметь несколько счетов в банке. 
-- Учитывать возможность блокировки/разблокировки счета. 
-- Реализовать поиск и сортировку счетов. 
-- Вычисление общей суммы по счетам. 
-- Вычисление суммы по всем счетам, имеющим положительный и отрицательный балансы отдельно. 
-*/
-
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task4;
 
 import java.util.*;
 
@@ -16,8 +7,7 @@ public class Customer {
     private List<BankAccount> accountsList = new ArrayList<>();
     private String surname, name, patronymic, address, passportData;
     
-    public Customer(String surname, String name, String patronymic, String address, String passportData)
-    {
+    public Customer(String surname, String name, String patronymic, String address, String passportData) {
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
@@ -25,8 +15,7 @@ public class Customer {
         this.passportData = passportData;
     }
     
-    public static Customer setCustomer(Scanner scanner) 
-    {
+    public static Customer setCustomer(Scanner scanner) {
         Customer customer = new Customer("", "", "", "", "");
         System.out.print("Surname: ");
         customer.surname = scanner.nextLine();        
@@ -42,35 +31,29 @@ public class Customer {
         return customer;
     }
     
-    public void createBankAccount(int sum)
-    {
+    public void createBankAccount(int sum) {
        accountsList.add(BankAccount.createBankAccount(sum));
     }
     
-    public void bankAccountInfo()
-    {
+    public void bankAccountInfo() {
        for (BankAccount bankAccount : accountsList)
            System.out.println(bankAccount.toString());
     }
     
-    public void toBlockAccount(int id)
-    {
+    public void toBlockAccount(int id) {
         for (BankAccount bankAccount : accountsList)
             if (bankAccount.getId() == id)
                 bankAccount.toBlockAccount();
     }
     
-    public void toUnblockAccount(int id)
-    {
+    public void toUnblockAccount(int id) {
         for (BankAccount bankAccount : accountsList)
             if (bankAccount.getId() == id)
                 bankAccount.toUnblockAccount();
     }
     
-    public void accountInfo(int id)
-    {
-        if (id >=0 && id < accountsList.size())
-        {
+    public void accountInfo(int id) {
+        if (id >=0 && id < accountsList.size()) {
             for (BankAccount bankAccount : accountsList)
                 if (bankAccount.getId() == id)
                     System.out.println(bankAccount.toString());
@@ -79,15 +62,13 @@ public class Customer {
             System.out.println("Incorrect choose!");
     }
     
-    public void sortBankAccount()
-    {
+    public void sortBankAccount() {
         Collections.sort(accountsList, new BankAccount.ByNumberComparator());
         for (BankAccount bankAccount : accountsList)
                 System.out.println(bankAccount.toString());
     }    
     
-    public int totalSum()
-    {
+    public int totalSum() {
         int sum = 0;
         for (BankAccount bankAccount : accountsList)
             sum += bankAccount.getSum();
@@ -95,8 +76,7 @@ public class Customer {
         return sum;
     }
     
-    public int positiveSum()
-    {
+    public int positiveSum() {
         int sum = 0;
         for (BankAccount bankAccount : accountsList)
             if (bankAccount.getSum() > 0)
@@ -105,8 +85,7 @@ public class Customer {
         return sum;
     } 
     
-    public int negativeSum()
-    {
+    public int negativeSum() {
         int sum = 0;
         for (BankAccount bankAccount : accountsList)
             if (bankAccount.getSum() < 0)
@@ -115,16 +94,13 @@ public class Customer {
         return sum;
     }
     
-    public static int numInput() 
-    {
+    public static int numInput() {
         int numInput = 0;
         Scanner sc = new Scanner(System.in);
-        if (sc.hasNextInt()) 
-        {
+        if (sc.hasNextInt()) {
             numInput = sc.nextInt();
         } 
-        else 
-        {
+        else {
             System.out.println("Invalid input!");
             numInput();
         }
