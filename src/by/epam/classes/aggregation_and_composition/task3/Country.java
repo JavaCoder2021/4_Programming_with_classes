@@ -1,10 +1,4 @@
-/**
-3. 
-* Создать объект класса Государство, используя классы Область, Район, Город. 
-* Методы: вывести на консоль столицу, количество областей, площадь, областные центры.  
-*/
-
-package by.epam.classes.aggregation_and_composition;
+package by.epam.classes.aggregation_and_composition.task3;
 
 import java.util.*;
 
@@ -18,51 +12,41 @@ public class Country {
     private List<District> districtsList = new ArrayList<>();
     private List<City> citiesList = new ArrayList<>();
  
-    public Country(String country, String capital) 
-    {
+    public Country(String country, String capital) {
         this.country = country;
         this.capital = capital;
     }
  
-    public String getCountry() 
-    {
+    public String getCountry() {
         return country;
     }
  
-    public String getCapital() 
-    {
+    public String getCapital() {
         return capital;
     }
  
-    public List getRegionList() 
-    {
+    public List getRegionList() {
         return regionsList;
     }
  
-    public static String strInput() 
-    {
+    public static String strInput() {
         Scanner sc = new Scanner(System.in);
-        if (sc.hasNextLine()) 
-        {
+        if (sc.hasNextLine()) {
             strInput = sc.nextLine();
         } 
-        else 
-        {
+        else {
             System.out.println("Invalid input!");
             strInput();
         }
         return strInput;
     }
  
-    public static int numInput() 
-    {
+    public static int numInput() {
         Scanner sc = new Scanner(System.in);
-        if (sc.hasNextInt()) 
-        {
+        if (sc.hasNextInt()) {
             numInput = sc.nextInt();
         } 
-        else 
-        {
+        else {
             System.out.println("Invalid input!");
             numInput();
         }
@@ -71,51 +55,42 @@ public class Country {
  
     public static double doubleInput() {
         Scanner sc = new Scanner(System.in);
-        if (sc.hasNextDouble()) 
-        {
+        if (sc.hasNextDouble()) {
             doubleInput = sc.nextDouble();
         } 
-        else 
-        {
+        else {
             System.out.println("Invalid input!");
             doubleInput();
         }
         return doubleInput;
     }
     
-    public void addCity(City city) 
-    {
+    public void addCity(City city) {
         this.citiesList.add(city);
     }
     
-    public void addDistrict(District district) 
-    {
+    public void addDistrict(District district) {
         this.districtsList.add(district);
     }
  
-    public void addRegion() 
-    {
+    public void addRegion() {
         this.regionsList.add(Region.addRegion());
         this.districtsList.add(District.addDistrict());
         this.citiesList.add(City.addCity());
     }    
     
-    public double squareRegions()
-    {
+    public double squareRegions() {
         double square = 0;
-        for (Region region : regionsList)
-        {
+        for (Region region : regionsList) {
             square += region.getSquare();
         }
         
         return square;
     }
     
-    public void regionalCities()
-    {
+    public void regionalCities() {
         int i = 0;
-        for(Region region: regionsList)
-        {
+        for(Region region: regionsList) {
             i++;
             System.out.println(i + ". " + region.getRegionCity());
         }
