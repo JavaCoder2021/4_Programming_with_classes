@@ -29,6 +29,18 @@ public class Country {
         return regionsList;
     }
  
+    public static String strInput() {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextLine()) {
+            strInput = sc.nextLine();
+        } 
+        else {
+            System.out.println("Invalid input!");
+            strInput();
+        }
+        return strInput;
+    }
+ 
     public static int numInput() {
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt()) {
@@ -39,6 +51,18 @@ public class Country {
             numInput();
         }
         return numInput;
+    }
+ 
+    public static double doubleInput() {
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextDouble()) {
+            doubleInput = sc.nextDouble();
+        } 
+        else {
+            System.out.println("Invalid input!");
+            doubleInput();
+        }
+        return doubleInput;
     }
     
     public void addCity(City city) {
