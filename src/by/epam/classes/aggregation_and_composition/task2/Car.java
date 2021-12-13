@@ -1,10 +1,9 @@
 /*
-2. 
-Создать объект класса Автомобиль, используя классы Колесо, Двигатель. 
-Методы: ехать, заправляться, менять колесо, вывести на консоль марку автомобиля.
-*/
-
-package by.epam.classes.aggregation_and_composition;
+ * 2. 
+ * Создать объект класса Автомобиль, используя классы Колесо, Двигатель. 
+ * Методы: ехать, заправляться, менять колесо, вывести на консоль марку автомобиля.
+ */
+package by.epam.classes.aggregation_and_composition.task2;
 
 import java.util.*;
 
@@ -16,8 +15,7 @@ public class Car {
     private double consumption;
     private double fuelLevel;
     
-    public Car(String brand, double consumption, Engine engine, Wheel wheel, double fuelLevel) 
-    {
+    public Car(String brand, double consumption, Engine engine, Wheel wheel, double fuelLevel) {
         this.brand = brand;
         this.consumption = consumption;
         this.engine = engine;
@@ -25,15 +23,13 @@ public class Car {
         this.fuelLevel = fuelLevel;
     }
     
-    public static Car get(Scanner scanner) 
-    {
+    public static Car get(Scanner scanner) {
         Car object = new Car("", 0, new Engine(0, 0), new Wheel(15, Wheel.Type.Winter), 0);
         System.out.print("Car model: ");
         object.brand = scanner.nextLine();
         
         System.out.print("Fuel consumption (100 km): ");
-        while (!scanner.hasNextDouble()) 
-        {
+        while (!scanner.hasNextDouble()) {
             scanner.next();
             System.out.println("Incorrect value!");
             System.out.print("Fuel consumption (100 km): ");
@@ -41,8 +37,7 @@ public class Car {
         object.consumption = scanner.nextDouble();
         
         System.out.print("Fuel level: ");
-        while (!scanner.hasNextDouble()) 
-        {
+        while (!scanner.hasNextDouble()) {
             scanner.next();
             System.out.println("Incorrect value!");
             System.out.print("Fuel level: ");
@@ -56,10 +51,8 @@ public class Car {
         return object;
     }
     
-    public void move() 
-    {
-        if (fuelLevel <= 0) 
-        {
+    public void move() {
+        if (fuelLevel <= 0) {
             System.out.println("Out of fuel!");
             return;
         }
@@ -69,21 +62,18 @@ public class Car {
         fuelLevel = 0;
     }
     
-    public void addFuel(double fuel) 
-    {
+    public void addFuel(double fuel) {
         fuelLevel += fuel;
     }
  
-    public void changeWheel(Scanner scanner) 
-    {
+    public void changeWheel(Scanner scanner) {
         wheel = Wheel.get(scanner);
     }
     
     @Override
-    public String toString() 
-    {
-            
-        return brand + " " + engine.toString() + "; " + consumption + " L/100km {Fuil: " + fuelLevel + "}; [" + wheel.toString() + "]";
+    public String toString() {   
+        return brand + " " + engine.toString() + "; " + consumption + 
+                " L/100km {Fuil: " + fuelLevel + "}; [" + wheel.toString() + "]";   
     }
     
 }
