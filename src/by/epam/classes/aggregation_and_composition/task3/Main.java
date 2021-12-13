@@ -5,8 +5,6 @@
  */
 package by.epam.classes.aggregation_and_composition.task3;
 
-import java.util.*;
-
 public class Main {
     
     public static void main(String[] args) {
