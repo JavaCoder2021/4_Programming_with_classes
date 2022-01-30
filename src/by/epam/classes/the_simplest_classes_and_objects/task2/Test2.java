@@ -8,15 +8,15 @@
 package by.epam.classes.the_simplest_classes_and_objects.task2;
 
 public class Test2 {
-    
-    private int a;
-    private int b;
-    
-    public Test2() {
+
+	private int a;
+	private int b;
+
+	public Test2() {
 		super();
-    }
-    
-    public Test2(int a, int b) {
+	}
+
+	public Test2(int a, int b) {
 		super();
 		this.a = a;
 		this.b = b;
@@ -37,5 +37,5 @@ public class Test2 {
 	public void setB(int b) {
 		this.b = b;
 	}
-           
+
 }
