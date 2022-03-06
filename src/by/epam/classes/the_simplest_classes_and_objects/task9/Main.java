@@ -21,7 +21,7 @@ public class Main {
     
     public static void main(String[] args) {
     	
-	    List<Book> books = new LinkedList();
+	List<Book> books = new LinkedList();
     	List<Book> sortedBooks;
     	
         books.add(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, "160", 13.55, "Мягкая обложка"));
