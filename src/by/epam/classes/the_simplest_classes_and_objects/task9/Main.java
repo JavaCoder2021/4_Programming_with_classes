@@ -82,10 +82,10 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-        System.out.print(str);
-        String line = scanner.nextLine();	
+        	System.out.print(str);
+        	String line = scanner.nextLine();	
         
-        return line;
+        	return line;
         
 	}
     
