@@ -27,9 +27,8 @@ public class TrainLogic {
 	public static int trainTrue(int nowTrainNumber, Train[] trains) {
 
 		for (int i = 0; i < trains.length; i++)
-			if (nowTrainNumber == trains[i].getTrainNumber()) {
+			if (nowTrainNumber == trains[i].getTrainNumber())
 				return i;
-			}
 
 		return -1;
 
