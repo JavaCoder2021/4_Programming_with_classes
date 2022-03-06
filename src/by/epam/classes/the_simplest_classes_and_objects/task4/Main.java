@@ -40,18 +40,18 @@ public class Main {
 			switch (choice) {
 			case 1:
 				Arrays.sort(trains, new TrainLogic.ByNumberComparator());
-				TrainPrint.allTrains(trains);
+				TrainShow.allTrains(trains);
 				break;
 			case 2:
 				int trainNumber = (TrainLogic.trainTrue(getIntFromConsol("Number of train: "), trains));
 				if (trainNumber > 0)
-					TrainPrint.oneTrain(trains[trainNumber]);
+					TrainShow.oneTrain(trains[trainNumber]);
 				else
 					System.out.println("Wrong array element number selected");
 				break;
 			case 3:
 				Arrays.sort(trains, new TrainLogic.ByDestinationAndTimeComparator());
-				TrainPrint.allTrains(trains);
+				TrainShow.allTrains(trains);
 				break;
 			}
 
