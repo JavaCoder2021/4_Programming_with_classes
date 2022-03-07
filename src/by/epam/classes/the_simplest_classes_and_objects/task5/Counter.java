@@ -51,6 +51,11 @@ public class Counter {
  
     public int value() {
         return current;
-    }    
+    }
+
+	@Override
+	public String toString() {
+		return "Counter [min=" + min + ", max=" + max + ", current=" + current + "]";
+	}
     
 }
