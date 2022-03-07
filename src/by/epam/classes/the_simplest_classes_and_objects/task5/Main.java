@@ -13,7 +13,7 @@ public class Main {
               
         Counter a = new Counter(5, 10, 6);
         Counter b = new Counter(6, 4, 7);
-        Counter c = new Counter(5, 3);
+        Counter c = new Counter();
         
         System.out.println("a: " + a.value());
         System.out.println("b: " + b.value());
