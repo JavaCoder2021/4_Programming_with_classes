@@ -61,16 +61,16 @@ public class Main {
 
 	public static void menuText() {
         
-        System.out.print(
-            "\n" + 
-            "Select the menu item:" + "\n" +
-            "1. Sorting by train numbers" + "\n" +
-            "2. Displaying information about the train by number" + "\n" +
-            "3. Sort by destination" + "\n" +
-            "4. Exit" + "\n\n"
-        );
+        	System.out.print(
+            		"\n" + 
+            		"Select the menu item:" + "\n" +
+            		"1. Sorting by train numbers" + "\n" +
+            		"2. Displaying information about the train by number" + "\n" +
+            		"3. Sort by destination" + "\n" +
+            		"4. Exit" + "\n\n"
+        	);
         
-    }
+    	}
 
 	public static int getIntFromConsol(String str) {
 
