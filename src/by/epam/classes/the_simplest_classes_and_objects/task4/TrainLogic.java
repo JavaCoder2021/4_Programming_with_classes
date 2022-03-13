@@ -1,10 +1,11 @@
 package by.epam.classes.the_simplest_classes_and_objects.task4;
 
 import java.util.Comparator;
+import java.util.List;
 
 public class TrainLogic {
 
-	public static class ByNumberComparator implements Comparator<Train> {
+	public class ByNumberComparator implements Comparator<Train> {
 
 		@Override
 		public int compare(Train left, Train right) {
@@ -13,7 +14,7 @@ public class TrainLogic {
 
 	}
 
-	public static class ByDestinationAndTimeComparator implements Comparator<Train> {
+	public class ByDestinationAndTimeComparator implements Comparator<Train> {
 
 		@Override
 		public int compare(Train left, Train right) {
@@ -24,13 +25,17 @@ public class TrainLogic {
 
 	}
 
-	public static int trainTrue(int nowTrainNumber, Train[] trains) {
+	public Train findByNumber(int nowTrainNumber, List<Train> trains) {
+		
+		Train train = null;
 
-		for (int i = 0; i < trains.length; i++)
-			if (nowTrainNumber == trains[i].getTrainNumber())
-				return i;
+		for (Train nowTrain : trains)
+			if (nowTrainNumber == nowTrain.getTrainNumber()) {
+				train = nowTrain;
+				break;
+			}
 
-		return -1;
+		return train;
 
 	}
 
