@@ -58,8 +58,9 @@ public class Time {
         addSeconds(hours_ * 60 * 60 + min_ * 60 + sec_);
     }
     
-    public void showTime() {    
-        System.out.printf("%02d:%02d:%02d\n", hours, min, sec);
-    }
+    @Override
+	public String toString() {
+		return hours + "ч " + min + "мин " + sec + "сек";
+	}
     
 }
