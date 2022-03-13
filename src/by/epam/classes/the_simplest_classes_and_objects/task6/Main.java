@@ -13,27 +13,27 @@ public class Main {
     public static void main(String[] args) {
         
         Time time = new Time(5, 24, 35);
-        time.showTime();
+        System.out.println(time);
         
         time.setTime(10, 67, 34);
-        time.showTime();
+        System.out.println(time);
         
         time.setHours(13);
         time.setMin(24);
         time.setSec(35);
-        time.showTime();
+        System.out.println(time);
         
         time.addTime(10, 50, 50);
-        time.showTime();
+        System.out.println(time);
         
         time.addSeconds(50);
-        time.showTime();
+        System.out.println(time);
 
         time.addMinutes(50);
-        time.showTime();
+        System.out.println(time);
 
         time.addHours(5);
-        time.showTime();        
+        System.out.println(time);       
         
     }
     
