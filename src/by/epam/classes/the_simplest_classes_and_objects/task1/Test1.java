@@ -73,7 +73,7 @@ public class Test1 {
 
 	@Override
 	public String toString() {
-		return "getClass().getSimpleName() + [a=" + a + ", b=" + b + "]";
+		return getClass().getSimpleName() + " [a=" + a + ", b=" + b + "]";
 	}
 
 }
