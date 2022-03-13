@@ -21,7 +21,7 @@ public class Main {
     
     public static void main(String[] args) {
     	
-	    List<Book> books = new LinkedList();
+    	List<Book> books = new LinkedList();
     	List<Book> sortedBooks;
         int choice;
     	
@@ -81,10 +81,10 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-        System.out.print(str);
-        String line = scanner.nextLine();	
+        	System.out.print(str);
+        	String line = scanner.nextLine();	
         
-        return line;
+        	return line;
         
 	}
     
