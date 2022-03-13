@@ -66,7 +66,7 @@ public class Shelf {
 
 	@Override
 	public String toString() {
-		return "Shelf [books=" + books + "]";
+		return getClass().getSimpleName() + " [books=" + books + "]";
 	}
 
 }
