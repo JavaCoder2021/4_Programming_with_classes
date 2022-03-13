@@ -21,8 +21,9 @@ public class Main {
     
     public static void main(String[] args) {
     	
-	List<Book> books = new LinkedList();
+	    List<Book> books = new LinkedList();
     	List<Book> sortedBooks;
+        int choice;
     	
         books.add(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, "160", 13.55, "Мягкая обложка"));
         books.add(new Book("Как завоевывать друзей и оказывать влияние на людей", "Дейл Карнеги", "Попурри", 2020, "352", 13.21, "Мягкая обложка"));
@@ -30,9 +31,7 @@ public class Main {
         
         Shelf shelf = new Shelf(books);
         shelf.addBook(new Book("Богатый папа, бедный папа", "Роберт Кийосаки", "Попурри", 2021, "352", 24.74, "Мягкая обложка"));
-    
-        int choice;
-        
+
         while (true) {
         	
             menuText();
@@ -82,10 +81,10 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-        	System.out.print(str);
-        	String line = scanner.nextLine();	
+        System.out.print(str);
+        String line = scanner.nextLine();	
         
-        	return line;
+        return line;
         
 	}
     
