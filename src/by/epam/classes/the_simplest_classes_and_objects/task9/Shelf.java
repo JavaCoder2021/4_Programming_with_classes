@@ -40,7 +40,7 @@ public class Shelf {
 	}
 
 	public void removeAllBooks() {
-		books.removeAll(books);
+		books.clear();
 	}
 
 	@Override
