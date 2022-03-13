@@ -16,6 +16,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		int choice;
 		Train[] trains = new Train[5];
 
 		trains[0] = new Train("Moscow", 1, "12:42");
@@ -24,14 +25,10 @@ public class Main {
 		trains[3] = new Train("St. Petersburg", 5, "12:42");
 		trains[4] = new Train("Moscow", 7, "05:44");
 
-		int choice;
-
 		while (true) {
 
 			menuText();
 			choice = getIntFromConsol("");
-			if (choice == 4)
-				break;
 			if (choice < 1 || choice > 4) {
 				System.out.println("Incorrect choose!");
 				continue;
@@ -54,6 +51,8 @@ public class Main {
 				TrainShow.allTrains(trains);
 				break;
 			}
+			if (choice == 4)
+				break;
 
 		}
 
@@ -61,16 +60,16 @@ public class Main {
 
 	public static void menuText() {
         
-        	System.out.print(
-            		"\n" + 
-            		"Select the menu item:" + "\n" +
-            		"1. Sorting by train numbers" + "\n" +
-            		"2. Displaying information about the train by number" + "\n" +
-            		"3. Sort by destination" + "\n" +
-            		"4. Exit" + "\n\n"
-        	);
+        System.out.print(
+            "\n" + 
+            "Select the menu item:" + "\n" +
+            "1. Sorting by train numbers" + "\n" +
+            "2. Displaying information about the train by number" + "\n" +
+            "3. Sort by destination" + "\n" +
+            "4. Exit" + "\n\n"
+        );
         
-    	}
+    }
 
 	public static int getIntFromConsol(String str) {
 
