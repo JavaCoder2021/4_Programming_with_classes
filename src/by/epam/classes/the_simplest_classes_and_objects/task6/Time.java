@@ -11,8 +11,13 @@ package by.epam.classes.the_simplest_classes_and_objects.task6;
 public class Time {
 
 	private int sec, min, hours;
+	
+	public Time() {
+		super();
+	}
 
 	public Time(int hours_, int min_, int sec_) {
+		super();
 		setTime(hours_, min_, sec_);
 	}
 
