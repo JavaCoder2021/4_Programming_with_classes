@@ -35,6 +35,7 @@ public class Time {
 	}
 
 	public void addSeconds(int sec_) {
+		if (sec_ < 0) sec_ = 0;
 		sec += sec_;
 
 		min += sec / 60;
@@ -60,7 +61,7 @@ public class Time {
 
 	@Override
 	public String toString() {
-		return hours + "ч " + min + "мин " + sec + "сек";
+		return hours + " ч " + min + " мин " + sec + " сек";
 	}
 
 }
