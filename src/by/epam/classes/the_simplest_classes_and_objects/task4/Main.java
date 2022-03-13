@@ -9,21 +9,22 @@
  */
 package by.epam.classes.the_simplest_classes_and_objects.task4;
 
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		int choice;
-		Train[] trains = new Train[5];
+		Depo depo = new Depo();
+		TrainLogic trainLogic = new TrainLogic();
+		TrainView trainView = new TrainView();
 
-		trains[0] = new Train("Moscow", 1, "12:42");
-		trains[1] = new Train("St. Petersburg", 2, "12:45");
-		trains[2] = new Train("Minsk", 10, "23:08");
-		trains[3] = new Train("St. Petersburg", 5, "12:42");
-		trains[4] = new Train("Moscow", 7, "05:44");
+		depo.addTrain(new Train("Moscow", 1, "12:42"));
+		depo.addTrain(new Train("St. Petersburg", 2, "12:45"));		
+		depo.addTrain(new Train("Minsk", 10, "23:08"));		
+		depo.addTrain(new Train("St. Petersburg", 5, "12:42"));		
+		depo.addTrain(new Train("Moscow", 7, "05:44"));
 
 		while (true) {
 
@@ -36,19 +37,19 @@ public class Main {
 
 			switch (choice) {
 			case 1:
-				Arrays.sort(trains, new TrainLogic.ByNumberComparator());
-				TrainShow.allTrains(trains);
+				Collections.sort(depo.getAllTrains(), trainLogic.new ByNumberComparator());
+				trainView.print(depo.getAllTrains());
 				break;
 			case 2:
-				int trainNumber = (TrainLogic.trainTrue(getIntFromConsol("Number of train: "), trains));
-				if (trainNumber > 0)
-					TrainShow.oneTrain(trains[trainNumber]);
+				Train train = trainLogic.findByNumber(getIntFromConsol("Number of train: "), depo.getAllTrains());
+				if (train != null)
+					trainView.print(train);
 				else
 					System.out.println("Wrong array element number selected");
 				break;
 			case 3:
-				Arrays.sort(trains, new TrainLogic.ByDestinationAndTimeComparator());
-				TrainShow.allTrains(trains);
+				Collections.sort(depo.getAllTrains(), trainLogic.new ByDestinationAndTimeComparator());
+				trainView.print(depo.getAllTrains());
 				break;
 			}
 			if (choice == 4)
