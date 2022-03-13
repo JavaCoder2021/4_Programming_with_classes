@@ -23,38 +23,39 @@ public class Main {
     	
     	List<Book> books = new LinkedList();
     	List<Book> sortedBooks;
+        Shelf shelf = new Shelf(books);
+        BookLogic bookLogic = new BookLogic();
+        BookView bookView = new BookView();
         int choice;
     	
-        books.add(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, "160", 13.55, "Мягкая обложка"));
-        books.add(new Book("Как завоевывать друзей и оказывать влияние на людей", "Дейл Карнеги", "Попурри", 2020, "352", 13.21, "Мягкая обложка"));
-        books.add(new Book("Думай и Богатей!", "Наполеон Хилл", "АСТ", 2019, "384", 14.41, "Твердый переплет"));
-        
-        Shelf shelf = new Shelf(books);
+        shelf.addBook(new Book("Самый богатый человек в Вавилоне", "Джордж Клейсон", "Попурри", 2021, "160", 13.55, "Мягкая обложка"));
+        shelf.addBook(new Book("Как завоевывать друзей и оказывать влияние на людей", "Дейл Карнеги", "Попурри", 2020, "352", 13.21, "Мягкая обложка"));
+        shelf.addBook(new Book("Думай и Богатей!", "Наполеон Хилл", "АСТ", 2019, "384", 14.41, "Твердый переплет"));
         shelf.addBook(new Book("Богатый папа, бедный папа", "Роберт Кийосаки", "Попурри", 2021, "352", 24.74, "Мягкая обложка"));
 
         while (true) {
         	
             menuText();
             choice = getIntFromConsol("");
-            if (choice == 0)
-                break;
             if (choice < 0 || choice > 3) {
                 System.out.println("Incorrect choose!");
                 continue;
             }
-                      
+                 
+            if (choice == 0)
+                break;
             switch (choice) {
                 case 1:
-                	sortedBooks = ShelfLogic.sortByAuthor(getStringFromConsol("Author: "), shelf.getAllBooks());
-                	ShelfShow.allBooks(sortedBooks);
+                	sortedBooks = bookLogic.sortByAuthor(getStringFromConsol("Author: "), shelf.getAllBooks());
+                	bookView.print(sortedBooks);
                     break;           
                 case 2:
-                	sortedBooks = ShelfLogic.sortByPublisher(getStringFromConsol("Publisher: "), shelf.getAllBooks());
-                	ShelfShow.allBooks(sortedBooks);
+                	sortedBooks = bookLogic.sortByPublisher(getStringFromConsol("Publisher: "), shelf.getAllBooks());
+                	bookView.print(sortedBooks);
                     break;           
                 case 3:
-                	sortedBooks = ShelfLogic.sortByYear(getIntFromConsol("After a given year: "), shelf.getAllBooks());
-                	ShelfShow.allBooks(sortedBooks);
+                	sortedBooks = bookLogic.sortByYear(getIntFromConsol("After a given year: "), shelf.getAllBooks());
+                	bookView.print(sortedBooks);
                     break;             
             }   
             
@@ -81,10 +82,10 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-        	System.out.print(str);
-        	String line = scanner.nextLine();	
+        System.out.print(str);
+        String line = scanner.nextLine();	
         
-        	return line;
+        return line;
         
 	}
     
