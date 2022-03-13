@@ -24,7 +24,7 @@ public class Triangle {
 		this.c = c;
 	}
 
-	public double distance(Point a, Point b) {
+	private double distance(Point a, Point b) {
 		double dx = a.getX() - b.getX();
 		double dy = a.getY() - b.getY();
 
