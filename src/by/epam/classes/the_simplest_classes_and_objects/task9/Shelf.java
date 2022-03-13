@@ -4,7 +4,11 @@ import java.util.*;
 
 public class Shelf {
 
-	private List<Book> books = new LinkedList();
+	private List<Book> books;
+	
+	{
+		books = new LinkedList();
+	}
 
 	public Shelf() {
 		super();
@@ -20,7 +24,7 @@ public class Shelf {
 	}
 
 	public void addBooks(List<Book> books) {
-		books.addAll(books);
+		this.books.addAll(books);
 	}
 
 	public Book getOneBook(int number) {
