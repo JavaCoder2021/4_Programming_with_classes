@@ -18,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int choice;
-    		List<Customer> sortedCustomers;
+    	List<Customer> sortedCustomers;
 		Customers customers = new Customers();
 		CustomerView customerView = new CustomerView();
 		CustomerLogic customerLogic = new CustomerLogic();
@@ -39,14 +39,14 @@ public class Main {
 				break;
 			switch (choice) {
 			case 1:
-				Collections.sort(customers.getCustomers(), customerLogic.new BySurnameComparator());
+				Collections.sort(customers.getCustomers(), customerLogic.new ByNameComparator());
 				customerView.print(customers.getCustomers());
 				break;
 			case 2:
 				System.out.println("Enter your credit card range\n");
 				int from = getIntFromConsol("From: ");
 				int to = getIntFromConsol("To: ");
-				sortedCustomers = customerLogic.ByCustomersComparator(from, to, customers.getCustomers());
+				sortedCustomers = customerLogic.ByCreditCardNumberComparator(from, to, customers.getCustomers());
 				customerView.print(sortedCustomers);
 				break;
 			}
