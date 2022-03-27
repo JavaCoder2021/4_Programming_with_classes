@@ -17,7 +17,7 @@ public class CustomerLogic {
 
 	}
 
-	public List<Customer> ByCustomersComparator(int from, int to, List<Customer> customers) {
+	public List<Customer> ByCreditCardNumberComparator(int from, int to, List<Customer> customers) {
 
 		List<Customer> sortedCustomers = new LinkedList<Customer>();
 
