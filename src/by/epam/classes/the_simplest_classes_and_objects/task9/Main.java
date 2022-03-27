@@ -21,9 +21,8 @@ public class Main {
     
     public static void main(String[] args) {
     	
-    	List<Book> books = new LinkedList();
     	List<Book> sortedBooks;
-        Shelf shelf = new Shelf(books);
+        Shelf shelf = new Shelf();
         BookLogic bookLogic = new BookLogic();
         BookView bookView = new BookView();
         int choice;
