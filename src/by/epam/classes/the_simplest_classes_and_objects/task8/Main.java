@@ -18,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int choice;
-    	List<Customer> sortedCustomers;
+    		List<Customer> sortedCustomers;
 		Customers customers = new Customers();
 		CustomerView customerView = new CustomerView();
 		CustomerLogic customerLogic = new CustomerLogic();
