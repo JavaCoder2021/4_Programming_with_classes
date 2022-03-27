@@ -7,7 +7,7 @@ public class Shelf {
 	private List<Book> books;
 	
 	{
-		books = new LinkedList();
+		books = new LinkedList<Book>();
 	}
 
 	public Shelf() {
