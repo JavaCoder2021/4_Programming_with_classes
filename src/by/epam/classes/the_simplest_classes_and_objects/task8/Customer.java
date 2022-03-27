@@ -11,113 +11,139 @@
  */
 package by.epam.classes.the_simplest_classes_and_objects.task8;
 
-import java.util.*;
-
 public class Customer {
-    
-    private static int ID = 0;
-    private int id;
-    private String surname, name, patronymic, address, creditCardNumber, bankAccountNumber;
-    
-    public Customer(String surname_, String name_, String patronymic_, String address_, 
-            String creditCardNumber_) {
-        id = ++ID;
-        surname = surname_;
-        name = name_;
-        patronymic = patronymic_;
-        address = address_;
-        creditCardNumber = creditCardNumber_;
-        bankAccountNumber = String.format("%08d", id);
-    }
-    
-    public void setSurname(String surname_) {
-        surname = surname_;
-    }    
-    
-    public void setName(String name_) {
-        name = name_;
-    }  
-    
-    public void setPatronymic(String patronymic_) {
-        patronymic = patronymic_;
-    }
-    
-    public void setAddress(String address_) {
-        address = address_;
-    }
-    
-    public void setCreditCardNumber(String creditCardNumber_) {
-        creditCardNumber = creditCardNumber_;
-    }
-    
-    public void setBankAccountNumber(String bankAccountNumber_) {
-        bankAccountNumber = bankAccountNumber_;
-    }
-    
-    public int getId() {
-        return id;
-    }
-    
-    public String getSurname() {
-        return surname;
-    }
-    
-    public String getName() {
-        return name;
-    }
- 
-    public String getPatronymic() {
-        return patronymic;
-    }
- 
-    public String getAddress() {
-        return address;
-    }    
-    
-    public String getCreditCardNumber() {
-        return creditCardNumber;
-    }
-    
-    public String getBankAccountNumber() {
-        return bankAccountNumber;
-    }
-    
-    public static Customer setCustomer(Scanner scanner) {
-        Customer customer = new Customer("", "", "", "", "");
-        System.out.print("Surname: ");
-        customer.surname = scanner.nextLine();        
-        System.out.print("Name: ");
-        customer.name = scanner.nextLine();
-        System.out.print("Patronymic: ");
-        customer.patronymic = scanner.nextLine();
-        System.out.print("Address: ");
-        customer.address = scanner.nextLine();
-        System.out.print("Credit сard number: ");
-        customer.creditCardNumber = scanner.nextLine();
-        
-        return customer;
-    }
-    
-    @Override
-    public String toString() {
-        return id + ", " + surname + ", " + name + ", " + patronymic + 
-            ". credit card number: " + creditCardNumber + ", bank account number: " + bankAccountNumber;
-    }
-    
-    public void print() {
-        System.out.println(toString());
-    }
-    
-    public static class BySurnameComparator implements Comparator < Customer > {
-        @Override
-        public int compare(Customer left, Customer right) 
-        {
-            if (left.surname != right.surname)
-            return left.surname.compareTo(right.surname);
-            if (left.name != right.name)
-            return left.name.compareTo(right.name);
-            return left.patronymic.compareTo(right.patronymic);
-        }
-    }
-    
+
+	private static int ID = 0;
+	private int id, creditCardNumber;
+	private String surname, name, patronymic, address, bankAccountNumber;
+
+	public Customer() {
+		super();
+		id = ++ID;
+	}
+
+	public Customer(String surname, String name, String patronymic, String address, int creditCardNumber) {
+		super();
+		id = ++ID;
+		this.surname = surname;
+		this.name = name;
+		this.patronymic = patronymic;
+		this.address = address;
+		this.creditCardNumber = creditCardNumber;
+		this.bankAccountNumber = String.format("%08d", id);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPatronymic() {
+		return patronymic;
+	}
+
+	public void setPatronymic(String patronymic) {
+		this.patronymic = patronymic;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public int getCreditCardNumber() {
+		return creditCardNumber;
+	}
+
+	public void setCreditCardNumber(int creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
+
+	public String getBankAccountNumber() {
+		return bankAccountNumber;
+	}
+
+	public void setBankAccountNumber(String bankAccountNumber) {
+		this.bankAccountNumber = bankAccountNumber;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((bankAccountNumber == null) ? 0 : bankAccountNumber.hashCode());
+		result = prime * result + creditCardNumber;
+		result = prime * result + id;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((patronymic == null) ? 0 : patronymic.hashCode());
+		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (bankAccountNumber == null) {
+			if (other.bankAccountNumber != null)
+				return false;
+		} else if (!bankAccountNumber.equals(other.bankAccountNumber))
+			return false;
+		if (creditCardNumber != other.creditCardNumber)
+			return false;
+		if (id != other.id)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (patronymic == null) {
+			if (other.patronymic != null)
+				return false;
+		} else if (!patronymic.equals(other.patronymic))
+			return false;
+		if (surname == null) {
+			if (other.surname != null)
+				return false;
+		} else if (!surname.equals(other.surname))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getSimpleName() + " [" + id + ", " + surname + ", " + name + ", " + patronymic
+				+ ". credit card number: " + creditCardNumber + ", bank account number: " + bankAccountNumber + "]";
+	}
+
 }
