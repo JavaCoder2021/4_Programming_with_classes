@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CustomerLogic {
 
-	public class BySurnameComparator implements Comparator<Customer> {	
+	public class ByNameComparator implements Comparator<Customer> {	
 
 		@Override
 		public int compare(Customer left, Customer right) {
