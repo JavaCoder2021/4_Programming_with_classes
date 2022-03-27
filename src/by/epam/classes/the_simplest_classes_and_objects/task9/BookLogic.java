@@ -7,7 +7,7 @@ public class BookLogic {
 	
 	public List<Book> sortByAuthor(String author, List<Book> books) {
 		
-		List<Book> sortedBooks = new LinkedList();
+		List<Book> sortedBooks = new LinkedList<Book>();
 
 		for (Book book : books)
 			if (author.toLowerCase().equals(book.getAuthor().toLowerCase()))
@@ -19,7 +19,7 @@ public class BookLogic {
 
 	public List<Book> sortByPublisher(String publisher, List<Book> books) {
 
-		List<Book> sortedBooks = new LinkedList();
+		List<Book> sortedBooks = new LinkedList<Book>();
 
 		for (Book book : books)
 			if (publisher.toLowerCase().equals(book.getPublisher().toLowerCase()))
@@ -31,7 +31,7 @@ public class BookLogic {
 
 	public List<Book> sortByYear(int year, List<Book> books) {
 
-		List<Book> sortedBooks = new LinkedList();
+		List<Book> sortedBooks = new LinkedList<Book>();
 
 		for (Book book : books)
 			if (book.getYearOfPublication() > year)
