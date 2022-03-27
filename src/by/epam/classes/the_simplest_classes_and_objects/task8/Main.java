@@ -39,14 +39,14 @@ public class Main {
 				break;
 			switch (choice) {
 			case 1:
-				Collections.sort(customers.getCustomers(), customerLogic.new ByNameComparator());
+				Collections.sort(customers.getCustomers(), customerLogic.new SortByName());
 				customerView.print(customers.getCustomers());
 				break;
 			case 2:
 				System.out.println("Enter your credit card range\n");
 				int from = getIntFromConsol("From: ");
 				int to = getIntFromConsol("To: ");
-				sortedCustomers = customerLogic.ByCreditCardNumberComparator(from, to, customers.getCustomers());
+				sortedCustomers = customerLogic.sortByCreditCardNumber(from, to, customers.getCustomers());
 				customerView.print(sortedCustomers);
 				break;
 			}
