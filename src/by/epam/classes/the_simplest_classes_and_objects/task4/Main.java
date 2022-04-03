@@ -37,18 +37,18 @@ public class Main {
 
 			switch (choice) {
 			case 1:
-				Collections.sort(depo.getAllTrains(), trainLogic.new ByNumberComparator());
+				trainLogic.sortByNumberComparator(depo.getAllTrains());
 				trainView.print(depo.getAllTrains());
 				break;
-			case 2:
-				Train train = trainLogic.findByNumber(getIntFromConsol("Number of train: "), depo.getAllTrains());
+			case 2:	
+				Train train = trainLogic.sortByNumber(getIntFromConsol("Number of train: "), depo.getAllTrains());
 				if (train != null)
 					trainView.print(train);
 				else
 					System.out.println("Wrong array element number selected");
 				break;
 			case 3:
-				Collections.sort(depo.getAllTrains(), trainLogic.new ByDestinationAndTimeComparator());
+				trainLogic.sortByDestinationAndTimeComparator(depo.getAllTrains());
 				trainView.print(depo.getAllTrains());
 				break;
 			}
