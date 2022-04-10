@@ -13,7 +13,6 @@
  */
 package by.epam.classes.the_simplest_classes_and_objects.task9;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -81,10 +80,10 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-        	System.out.print(str);
-        	String line = scanner.nextLine();	
+        System.out.print(str);
+        String line = scanner.nextLine();	
         
-        	return line;
+        return line;
         
 	}
     
