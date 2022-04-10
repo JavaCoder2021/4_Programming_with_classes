@@ -18,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int choice;
-    		List<Customer> sortedCustomers;
+    	List<Customer> sortedCustomers;
 		Customers customers = new Customers();
 		CustomerView customerView = new CustomerView();
 		CustomerLogic customerLogic = new CustomerLogic();
@@ -39,7 +39,7 @@ public class Main {
 				break;
 			switch (choice) {
 			case 1:
-				Collections.sort(customers.getCustomers(), customerLogic.new SortByName());
+				customerLogic.sortByName(customers.getCustomers());
 				customerView.print(customers.getCustomers());
 				break;
 			case 2:
