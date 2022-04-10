@@ -4,16 +4,20 @@ import java.util.*;
 
 public class CustomerLogic {
 
-	public class SortByName implements Comparator<Customer> {	
-
-		@Override
-		public int compare(Customer left, Customer right) {
-			if (left.getSurname() != right.getSurname())
-				return left.getSurname().compareTo(right.getSurname());
-			if (left.getName() != right.getName())
-				return left.getName().compareTo(right.getName());
-			return left.getPatronymic().compareTo(right.getPatronymic());
-		}
+	public void sortByName(List<Customer> customers) {	
+		
+		Collections.sort(customers, new Comparator<Customer>() {
+			
+			@Override
+			public int compare(Customer left, Customer right) {
+				if (left.getSurname() != right.getSurname())
+					return left.getSurname().compareTo(right.getSurname());
+				if (left.getName() != right.getName())
+					return left.getName().compareTo(right.getName());
+				return left.getPatronymic().compareTo(right.getPatronymic());
+			}		
+			
+		});
 
 	}
 
