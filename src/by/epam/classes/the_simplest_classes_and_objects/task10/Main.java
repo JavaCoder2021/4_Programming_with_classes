@@ -47,20 +47,20 @@ public class Main {
 				break;
 			switch (choice) {
 			case 1:
-		        destination = getStringFromConsol("Destination: ");
-		        sortedAirlines = airlineLogic.sortByDestination(airlines.getAirlines(), destination);
-		        airlineView.print(sortedAirlines);
+		        	destination = getStringFromConsol("Destination: ");
+		        	sortedAirlines = airlineLogic.sortByDestination(airlines.getAirlines(), destination);
+		        	airlineView.print(sortedAirlines);
 				break;
 			case 2:
-		        daysOfWeek = getStringFromConsol("Day of week: ");
-		        sortedAirlines = airlineLogic.sortByDaysOfWeek(airlines.getAirlines(), daysOfWeek);
-		        airlineView.print(sortedAirlines);
+		        	daysOfWeek = getStringFromConsol("Day of week: ");
+		        	sortedAirlines = airlineLogic.sortByDaysOfWeek(airlines.getAirlines(), daysOfWeek);
+		        	airlineView.print(sortedAirlines);
 				break;
 			case 3:
-		        daysOfWeek = getStringFromConsol("Day of week: ");
-		        departureTime = getDoubleFromConsol("Departure time: ");
-		        sortedAirlines = airlineLogic.sortByDepartureTime(airlines.getAirlines(), daysOfWeek, departureTime);
-		        airlineView.print(sortedAirlines);
+		        	daysOfWeek = getStringFromConsol("Day of week: ");
+		        	departureTime = getDoubleFromConsol("Departure time: ");
+		       		sortedAirlines = airlineLogic.sortByDepartureTime(airlines.getAirlines(), daysOfWeek, departureTime);
+		        	airlineView.print(sortedAirlines);
 				break;
 			}
 
