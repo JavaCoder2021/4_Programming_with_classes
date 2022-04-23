@@ -3,44 +3,74 @@ package by.epam.classes.the_simplest_classes_and_objects.task10;
 import java.util.*;
 
 public class Airlines {
-    
-    LinkedList<Airline> airlines = new LinkedList();
-    
-    public Airlines() {
-        airlines.add(new Airline("Moscow",  105,    "Boing",    "13.55", "Monday"));
-        airlines.add(new Airline("Minsk",   35,     "Boing",    "10.05", "Saturday"));
-        airlines.add(new Airline("Kiev",    125,    "Boing",    "09.20", "Sunday"));
-        airlines.add(new Airline("Moscow",  55,     "Boing",    "21.45", "Sunday"));
-        airlines.add(new Airline("Minsk",   45,     "Boing",    "19.15", "Wednesday"));
-    }
-       
-    public void sortByDestination(Scanner input) {
-        System.out.print("Destination: ");
-        String destination = input.nextLine();
-        for (Airline mbr : airlines) 
-            if (destination.toLowerCase().equals(mbr.getDestination().toLowerCase()))
-                mbr.print();
-    }
-    
-    public void sortByDaysOfWeek(Scanner input) {
-        System.out.print("Day of week: ");
-        String daysOfWeek = input.nextLine();
-        for (Airline mbr : airlines) {    
-            if (daysOfWeek.toLowerCase().equals(mbr.getDaysOfWeek().toLowerCase()))
-                mbr.print();
-        }
-    }
-    
-    public void sortByDepartureTime(Scanner input) {
-        System.out.print("Day of week: ");
-        String daysOfWeek = input.nextLine();
-        System.out.print("Departure time: ");
-        String departureTime = input.nextLine();
-        for (Airline mbr : airlines) {    
-            if (daysOfWeek.toLowerCase().equals(mbr.getDaysOfWeek().toLowerCase()) && 
-                    (Double.valueOf(mbr.getDepartureTime()) > Double.valueOf(departureTime)))
-                mbr.print();
-        }
-    }    
-    
+	
+	private List<Airline> airlines;
+	
+	{
+		airlines = new LinkedList<Airline>();
+	}
+
+	public Airlines() {
+		super();
+	}
+
+	public Airlines(List<Airline> airlines) {
+		super();
+		this.airlines = airlines;
+	}
+
+	public void addAirline(Airline airline) {
+		airlines.add(airline);
+	}
+
+	public void addAirlines(List<Airline> airlines) {
+		airlines.addAll(airlines);
+	}
+
+	public Airline getAirline(int number) {
+		return airlines.get(number);
+	}
+
+	public List<Airline> getAirlines() {
+		return airlines;
+	}
+
+	public void removeAirline(Airline airline) {
+		airlines.remove(airline);
+	}
+
+	public void removeAirlines() {
+		airlines.clear();
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((airlines == null) ? 0 : airlines.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Airlines other = (Airlines) obj;
+		if (airlines == null) {
+			if (other.airlines != null)
+				return false;
+		} else if (!airlines.equals(other.airlines))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getSimpleName() + " [airlines=" + airlines + "]";
+	}
+
 }
