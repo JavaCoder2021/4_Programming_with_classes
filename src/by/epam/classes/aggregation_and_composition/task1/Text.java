@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Text {
 
-	private String text;
 	private List<Sentence> sentences = new ArrayList<Sentence>();
 	private String header;
 
@@ -81,9 +80,10 @@ public class Text {
 
 	@Override
 	public String toString() {
-		text = header + ".\n";
+		String text = "";
+		text += header + ".\n";
 		for (Sentence sentense : sentences)
-			text = text + sentense + "\n";
+			text += sentense + "\n";
 		return text;
 	}
 
