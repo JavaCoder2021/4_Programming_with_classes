@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Sentence {
 
-	private String sentence = "";
+	private String sentence;
 	private List<Word> words = new ArrayList<Word>();
 
 	public Sentence() {
@@ -64,6 +64,7 @@ public class Sentence {
 
 	@Override
 	public String toString() {
+		sentence = "";
 		for (int i = 0; i < words.size(); i++) {
 			if ((i + 1) == words.size())
 				sentence = sentence + words.get(i) + ".";
