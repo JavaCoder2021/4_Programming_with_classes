@@ -13,8 +13,8 @@ public class Main {
 
 		Sentence sentense1 = new Sentence();
 		Sentence sentense2 = new Sentence();
-		sentense1.addWords(Arrays.asList(new Word("Train"), new Word("let's"), new Word("go"), new Word("to Moscow")));
-		sentense2.addWords(Arrays.asList(new Word("Car"), new Word("goes"), new Word("to"), new Word("Minsk"), new Word("every week")));
+		sentense1.addWords(Arrays.asList(new Word("Train"), new Word("let's"), new Word("go"), new Word("to"), new Word("Moscow")));
+		sentense2.addWords(Arrays.asList(new Word("Car"), new Word("goes"), new Word("to"), new Word("Minsk"), new Word("every"), new Word("week")));
 		
 		Text text = new Text();
 		text.setHeader("Train");
