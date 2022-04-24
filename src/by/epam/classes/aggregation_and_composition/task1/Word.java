@@ -1,47 +1,31 @@
 package by.epam.classes.aggregation_and_composition.task1;
 
-import java.util.*;
+public class Word {
 
-public class Sentence {
+	private String word;
 
-	private String sentence = "";
-	private List<Word> words = new ArrayList<Word>();
-
-	public Sentence() {
+	public Word() {
 		super();
 	}
 
-	public Sentence(Word word) {
+	public Word(String word) {
 		super();
-		words.add(word);
+		this.word = word;
 	}
 
-	public Sentence(List<Word> words) {
-		super();
-		this.words = words;
+	public String getWord() {
+		return word;
 	}
 
-	public void addWord(Word word) {
-		this.words.add(word);
-	}
-
-	public void removeWord(Word word) {
-		this.words.remove(word);
-	}
-
-	public void addWords(List<Word> words) {
-		this.words.addAll(words);
-	}
-
-	public List<Word> getWords() {
-		return words;
+	public void setWord(String word) {
+		this.word = word;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((words == null) ? 0 : words.hashCode());
+		result = prime * result + ((word == null) ? 0 : word.hashCode());
 		return result;
 	}
 
@@ -53,24 +37,18 @@ public class Sentence {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Sentence other = (Sentence) obj;
-		if (words == null) {
-			if (other.words != null)
+		Word other = (Word) obj;
+		if (word == null) {
+			if (other.word != null)
 				return false;
-		} else if (!words.equals(other.words))
+		} else if (!word.equals(other.word))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		for (int i = 0; i < words.size(); i++) {
-			if ((i + 1) == words.size())
-				sentence = sentence + words.get(i) + ".";
-			else
-				sentence = sentence + words.get(i) + " ";
-		}
-		return sentence;
+		return word;
 	}
 
 }
