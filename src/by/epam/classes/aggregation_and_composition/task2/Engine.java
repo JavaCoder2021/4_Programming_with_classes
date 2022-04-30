@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Engine implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-    private int number;
-    private int power;
+    	private int number;
+    	private int power;
     
 	public Engine() {
 		super();
