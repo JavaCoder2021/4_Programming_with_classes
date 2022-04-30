@@ -1,7 +1,7 @@
 /*
  * 2. 
- * Создать объект класса Автомобиль, используя классы Колесо, Двигатель. 
- * Методы: ехать, заправляться, менять колесо, вывести на консоль марку автомобиля.
+ * РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° РђРІС‚РѕРјРѕР±РёР»СЊ, РёСЃРїРѕР»СЊР·СѓСЏ РєР»Р°СЃСЃС‹ РљРѕР»РµСЃРѕ, Р”РІРёРіР°С‚РµР»СЊ. 
+ * РњРµС‚РѕРґС‹: РµС…Р°С‚СЊ, Р·Р°РїСЂР°РІР»СЏС‚СЊСЃСЏ, РјРµРЅСЏС‚СЊ РєРѕР»РµСЃРѕ, РІС‹РІРµСЃС‚Рё РЅР° РєРѕРЅСЃРѕР»СЊ РјР°СЂРєСѓ Р°РІС‚РѕРјРѕР±РёР»СЏ.
  */
 package by.epam.classes.aggregation_and_composition.task2;
 
@@ -48,17 +48,17 @@ public class Main {
 	}
 
 	public static void menuText() { 
-        System.out.print(
-            "\n" + 
-            "Select the menu item:\n" +
-            "0. Exit\n" +
-            "1. Go\n" +
-            "2. Refuel\n" +
-            "3. Change the wheel\n" +
-            "4. Display the brand of the car on the console\n" +                   
-            "\n"
-        );   
-    }
+            System.out.print(
+            	"\n" + 
+            	"Select the menu item:\n" +
+            	"0. Exit\n" +
+            	"1. Go\n" +
+            	"2. Refuel\n" +
+            	"3. Change the wheel\n" +
+            	"4. Display the brand of the car on the console\n" +                   
+            	"\n"
+            );   
+        }
 
 	public static int getIntFromConsol(String str) {
 
