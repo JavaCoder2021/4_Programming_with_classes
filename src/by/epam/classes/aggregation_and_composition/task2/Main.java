@@ -27,22 +27,21 @@ public class Main {
 			if (choice == 0)
 				break;
 			switch (choice) {
-			case 1:
-				System.out.printf("Car passed %.2f km. \n", car.move());
-				break;
-			case 2:
-				car.addFuel(getDoubleFromConsol("Add fuel (L): "));
-				System.out.printf("Fuel level: %.2f litres.\n", car.getFuelLevel());
-				break;
-			case 3:
-				car.setWheelDiameter(getIntFromConsol("Wheel diameter: "));
-				System.out.println("New wheel diameter: " + car.getWheelDiameter());
-				break;
-			case 4:
-				System.out.println("Car brand: " + car.getBrand());
-				break;
+				case 1:
+					System.out.printf("Car passed %.2f km. \n", car.move());
+					break;
+				case 2:
+					car.addFuel(getDoubleFromConsol("Add fuel (L): "));
+					System.out.printf("Fuel level: %.2f litres.\n", car.getFuelLevel());
+					break;
+				case 3:
+					car.setWheelDiameter(getIntFromConsol("Wheel diameter: "));
+					System.out.println("New wheel diameter: " + car.getWheelDiameter());
+					break;
+				case 4:
+					System.out.println("Car brand: " + car.getBrand());
+					break;
 			}
-
 		}
 
 	}
