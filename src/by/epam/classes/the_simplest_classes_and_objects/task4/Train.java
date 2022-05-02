@@ -9,8 +9,11 @@
  */
 package by.epam.classes.the_simplest_classes_and_objects.task4;
 
-public class Train {
+import java.io.Serializable;
 
+public class Train implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private String destination;
 	private int trainNumber;
 	private String departureTime;
