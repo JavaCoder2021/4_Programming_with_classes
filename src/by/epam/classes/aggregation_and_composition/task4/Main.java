@@ -41,39 +41,39 @@ public class Main {
             switch (choice) {
                 case 1:
                 	customerView.printBankAccounts(customer);
-                    break;
+                   	break;
                 case 2:
                 	if (customerLogic.blockedAccount(customer, getIntFromConsol("Id: ")))
                 		System.out.println("Account blocked!");
                 	else
                 		System.out.println("Incorrect Id!");
-                    break; 
+                    	break; 
                 case 3:
                 	if (customerLogic.unBlockedAccount(customer, getIntFromConsol("Id: ")))
                 		System.out.println("Account unblocked!");
                 	else
                 		System.out.println("Incorrect Id!");
-                    break;   
+                   	break;   
                 case 4:
                 	bankAccount = customerLogic.findAccount(customer, getIntFromConsol("Id: "));
                 	if (bankAccount != null)
                 		customerView.printBankAccount(bankAccount);
                 	else
                 		System.out.println("Incorrect Id!");                		
-                    break;    
+                    	break;    
                 case 5:
                 	customerLogic.sortBySum(customer.getAccounts());
                 	customerView.printBankAccounts(customer);
-                    break; 
+			break; 
                 case 6:
-                    System.out.println("Total sum all accounts: " + customerLogic.getTotalSum(customer));
-                    break;   
+                    	System.out.println("Total sum all accounts: " + customerLogic.getTotalSum(customer));
+                    	break;   
                 case 7:
-                    System.out.println("Sum of positive accounts: " + customerLogic.getPositiveSum(customer));
-                    break;    
+                   	System.out.println("Sum of positive accounts: " + customerLogic.getPositiveSum(customer));
+                   	break;    
                 case 8:
-                    System.out.println("Sum of negative accounts: " + customerLogic.getNegativeSum(customer));
-                    break;  
+                    	System.out.println("Sum of negative accounts: " + customerLogic.getNegativeSum(customer));
+                    	break;  
             }    
             
         }
@@ -93,8 +93,8 @@ public class Main {
                 "7 - Sum of accounts with positive balance\n" +                     
                 "8 - Sum of accounts with negative balance\n" +                     
                 "\n"
-            );   
-    }
+         );   
+     }
     
 	public static int getIntFromConsol(String str) {
 
