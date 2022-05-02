@@ -46,14 +46,14 @@ public class CustomerLogic {
 		return success;
 	}
 	
-    public void sortBySum(List<BankAccount> accounts) {
-        Collections.sort(accounts, new Comparator<BankAccount>() {
-            @Override
-            public int compare(BankAccount left, BankAccount right) {
-                return left.getSum() - right.getSum();
-            }
-        });
-    }
+    	public void sortBySum(List<BankAccount> accounts) {
+        	Collections.sort(accounts, new Comparator<BankAccount>() {
+            		@Override
+            		public int compare(BankAccount left, BankAccount right) {
+                		return left.getSum() - right.getSum();
+            		}
+        	});
+    	}
     
 	public int getTotalSum (Customer customer) {
 		sum = 0;
