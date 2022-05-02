@@ -82,18 +82,18 @@ public class Main {
     
     public static void menuText() { 
         System.out.print(
-            "\n" + 
-            "0 - Exit\n" +   
-            "1 - Bank accounts of an individual\n" +    
-            "2 - Block account by id\n" +      
-            "3 - Unblock account by id\n" +      
-            "4 - Information about the account by id\n" +     
-            "5 - Sort accounts by sum\n" +  
-            "6 - Total sum of accounts\n" +    
-            "7 - Sum of accounts with positive balance\n" +                     
-            "8 - Sum of accounts with negative balance\n" +                     
-            "\n"
-        );   
+                "\n" + 
+                "0 - Exit\n" +   
+                "1 - Bank accounts of an individual\n" +    
+                "2 - Block account by id\n" +      
+                "3 - Unblock account by id\n" +      
+                "4 - Information about the account by id\n" +     
+                "5 - Sort accounts by sum\n" +  
+                "6 - Total sum of accounts\n" +    
+                "7 - Sum of accounts with positive balance\n" +                     
+                "8 - Sum of accounts with negative balance\n" +                     
+                "\n"
+            );   
     }
     
 	public static int getIntFromConsol(String str) {
