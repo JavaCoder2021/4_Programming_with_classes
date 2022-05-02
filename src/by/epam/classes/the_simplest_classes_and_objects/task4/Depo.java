@@ -1,10 +1,12 @@
 package by.epam.classes.the_simplest_classes_and_objects.task4;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Depo {
-	
+public class Depo implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private List<Train> trains;
 	
 	{
