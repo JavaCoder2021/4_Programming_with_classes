@@ -15,14 +15,14 @@ public class Main {
 	public static void main(String[] args) {
 
     	BankAccount bankAccount;
-		CustomerLogic customerLogic = new CustomerLogic();
-		CustomerView customerView = new CustomerView();
+	CustomerLogic customerLogic = new CustomerLogic();
+	CustomerView customerView = new CustomerView();
 		
-		Customer customer = new Customer("Ivanov", "Ivan", "Ivanovich", "Vitebsk", "BM0000001");
-		customer.addAccount(new BankAccount(false, 5000));
-		customer.addAccount(new BankAccount(true,  -2500));
-		customer.addAccount(new BankAccount(false, -500));
-		customer.addAccount(new BankAccount(false, 4000));
+	Customer customer = new Customer("Ivanov", "Ivan", "Ivanovich", "Vitebsk", "BM0000001");
+	customer.addAccount(new BankAccount(false, 5000));
+	customer.addAccount(new BankAccount(true,  -2500));
+	customer.addAccount(new BankAccount(false, -500));
+	customer.addAccount(new BankAccount(false, 4000));
 		
         int choice;
         
