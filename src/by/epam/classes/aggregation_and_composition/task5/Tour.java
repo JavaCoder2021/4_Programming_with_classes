@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class Tour implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-    private TourType type;
-    private TourTransport transport;
-    private boolean food;
-    private int numberOfDays;
-    private int cost;
+    	private TourType type;
+    	private TourTransport transport;
+    	private boolean food;
+    	private int numberOfDays;
+    	private int cost;
     
 	public Tour() {
 		super();
