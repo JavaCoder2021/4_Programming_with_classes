@@ -72,7 +72,7 @@ public class Main {
 	            "3 - View all tours for client\n" + 
 	            "\n"
 	      ); 
-    }
+        }
 
 	public static int getIntFromConsol(String str) {
 
